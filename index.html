@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوكر للتعريبات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warning: '#FFCC00',
+                        dark: '#060608',
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* إعدادات الخلفية */
+        body {
+            background-color: #060608 !important;
+            /* صورة خلفية برمجية/داكنة مع تدرج تعتيم قوي */
+            background-image: linear-gradient(to bottom, rgba(6, 6, 8, 0.88), rgba(6, 6, 8, 0.98)), 
+                              url('wallhaven-853z1o.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-attachment: fixed !important;
+        }
+
+        /* تأثير التشويش (Grain) */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* التأثير الزجاجي (Glassmorphism) */
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(20, 20, 25, 0.6) 0%, rgba(10, 10, 12, 0.8) 100%);
+            border: 1px solid rgba(63, 63, 70, 0.3);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        /* تأثير التوهج باللون الأصفر التحذيري عند تمرير الفأرة */
+        .glass-panel:hover {
+            border-color: rgba(255, 204, 0, 0.4);
+            box-shadow: 0 0 25px rgba(255, 204, 0, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        /* تلوين التحديد */
+        ::selection {
+            background-color: #FFCC00;
+            color: #000;
+        }
+
+
+    </style>
+</head>
+<body class="min-h-screen text-gray-400 font-sans antialiased relative overflow-x-hidden">
+
+    <div class="grain-overlay"></div>
+
+    <div class="relative z-10 flex flex-col min-h-screen">
+        
+        <nav class="max-w-4xl mx-auto w-full px-6 py-6 mt-6 glass-panel rounded-2xl flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="path1-3.svg" alt="شعار الوكر" class="w-10 h-10 object-contain drop-shadow-[0_0_8px_rgba(255,204,0,0.5)]">
+                <span class="font-black text-xl text-zinc-100 tracking-wide">الوكر.</span>
+            </div>
+            <div class="hidden sm:flex gap-6 text-sm font-bold tracking-wide">
+                <a href="#projects" class="hover:text-warning transition-colors drop-shadow-md">الإصدارات</a>
+                <a href="#about" class="hover:text-warning transition-colors drop-shadow-md">من أنتم</a>
+            </div>
+        </nav>
+
+        <header class="max-w-4xl mx-auto w-full px-6 pt-24 pb-20 text-center sm:text-right">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md glass-panel text-zinc-300 text-[11px] font-bold mb-6">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-warning opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-warning"></span>
+                </span>
+                <span class="tracking-widest uppercase">مشغولون باليكز</span>
+            </div>
+            
+
+            <h1 class="text-5xl sm:text-7xl font-black text-zinc-100 leading-tight mb-2 drop-shadow-lg">
+                الوكر -لا للحكر-
+            </h1>
+            <p class="text-warning font-bold text-xl sm:text-2xl mb-8 drop-shadow-[0_0_10px_rgba(255,204,0,0.4)]">
+                فريق لتعريب الألعاب وتعديلها
+            </p>
+            <div class="max-w-2xl sm:mx-0 mx-auto">
+                <p class="text-base sm:text-lg leading-relaxed text-zinc-400 mb-10">
+                   حظ التعديل عندنا أكبر من حظ الترجمة. فغالبًا تُتّرك المشاريع وتُنبذ دون إكمال.
+                </p>
+            </div>
+        </header>
+
+        <section id="new" class="max-w-4xl mx-auto w-full px-6 pb-24 flex-grow">
+            <div class="text-zinc-500 text-[13px] font-bold tracking-widest uppercase px-1 mb-6 border-r-2 border-warning pr-2">
+                المشاريع
+            </div>
+            
+<div class="glass-panel rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6 opacity-60 hover:opacity-100">
+    <div class="max-w-lg">
+        <div class="flex items-center gap-3 mb-2">
+            <a href="https://arraqim.github.io/alwakr/zero/" class="text-xl font-bold text-zinc-400 hover:text-warning transition-colors">
+                كالتنين: صفر | 龍が如く0
+            </a>
+            <span class="text-[10px] font-bold text-zinc-500 bg-zinc-900/80 px-2 py-0.5 rounded border border-zinc-800/60">قيد العمل</span>
+        </div>
+        <p class="text-xs leading-relaxed text-zinc-500">
+            لم تُكمل. وستُنشر أدوات تعديلها فور صدور التعريب.
+        </p>
+    </div>
+    <div class="flex flex-row gap-3 text-xs font-bold shrink-0 opacity-50 cursor-not-allowed">
+        <span class="text-zinc-500">قريبًا...</span>
+    </div>
+</div>
+
+            </div>
+        </section>
+
+        <footer class="mt-auto py-8 text-center text-zinc-600 text-[11px] tracking-widest border-t border-zinc-900/60 w-full">
+            © 2077 نصف الحقوق محفوظة
+            <br>
+            <span class="text-zinc-700">فريق تابع لطائفة الرَّقيم.</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>
