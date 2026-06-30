@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كالتنين: صفر | المدونة - الوكر للتعريبات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warning: '#FFCC00',
+                        dark: '#060608',
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #060608 !important;
+            background-image: linear-gradient(to bottom, rgba(6, 6, 8, 0.88), rgba(6, 6, 8, 0.98)),
+                              url('https://arraqim.github.io/alwakr/wallhaven-853z1o.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-attachment: fixed !important;
+        }
+
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(20, 20, 25, 0.6) 0%, rgba(10, 10, 12, 0.8) 100%);
+            border: 1px solid rgba(63, 63, 70, 0.3);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .glass-panel:hover {
+            border-color: rgba(255, 204, 0, 0.4);
+            box-shadow: 0 0 25px rgba(255, 204, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        ::selection {
+            background-color: #FFCC00;
+            color: #000;
+        }
+
+        /* تنسيقات نص المقالة */
+        .article-body p {
+            margin-bottom: 1.4em;
+            line-height: 2;
+        }
+        .article-body h2 {
+            color: #f4f4f5;
+            font-weight: 900;
+            font-size: 1.4rem;
+            margin-top: 2.2em;
+            margin-bottom: 0.8em;
+            padding-right: 0.6em;
+            border-right: 2px solid #FFCC00;
+        }
+        .article-body blockquote {
+            border-right: 2px solid rgba(255,204,0,0.4);
+            padding-right: 1.2em;
+            margin: 1.6em 0;
+            color: #a1a1aa;
+            font-style: normal;
+        }
+        .article-hero {
+            background: linear-gradient(135deg, rgba(255,204,0,0.06) 0%, rgba(0,0,0,0.5) 100%);
+        }
+
+        /* بطاقات أعضاء الفريق */
+        .role-badge {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .avatar-ring {
+            background: linear-gradient(135deg, rgba(255,204,0,0.15) 0%, rgba(0,0,0,0.6) 100%);
+            border: 1px solid rgba(255,204,0,0.25);
+        }
+
+        /* قسم التنزيل */
+        .download-card {
+            background: linear-gradient(135deg, rgba(255,204,0,0.05) 0%, rgba(10,10,12,0.85) 100%);
+        }
+        .step-num {
+            background: rgba(255,204,0,0.1);
+            border: 1px solid rgba(255,204,0,0.3);
+            color: #FFCC00;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-400 font-sans antialiased relative overflow-x-hidden">
+
+    <div class="grain-overlay"></div>
+
+    <div class="relative z-10 flex flex-col min-h-screen">
+
+        <nav class="sticky top-4 z-50 max-w-4xl mx-auto w-full px-4 sm:px-6 py-3 sm:py-4 glass-panel rounded-2xl flex justify-between items-center transition-all duration-300">
+            <a href="https://arraqim.github.io/alwakr/" class="flex items-center gap-2 sm:gap-3 cursor-pointer">
+                <img src="https://arraqim.github.io/alwakr/path1-3.svg" alt="شعار الوكر" class="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-[0_0_8px_rgba(255,204,0,0.5)] transition-transform hover:scale-105">
+                <span class="font-black text-lg sm:text-xl text-zinc-100 tracking-wide">الوكر.</span>
+            </a>
+            <div class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm font-bold tracking-wide">
+                <a href="https://arraqim.github.io/alwakr/blog/" class="text-zinc-300 hover:text-warning transition-all duration-300 hover:scale-105 drop-shadow-md hover:drop-shadow-[0_0_8px_rgba(255,204,0,0.6)]">الإصدارات</a>
+                <a href="index.html#about" class="text-zinc-300 hover:text-warning transition-all duration-300 hover:scale-105 drop-shadow-md hover:drop-shadow-[0_0_8px_rgba(255,204,0,0.6)]">من أنتم</a>
+            </div>
+        </nav>
+
+        <main class="max-w-3xl mx-auto w-full px-6 pt-16 pb-24 flex-grow">
+
+            <a href="https://arraqim.github.io/alwakr/blog/" class="inline-flex items-center gap-2 text-xs font-bold text-zinc-500 hover:text-warning transition-colors mb-8">
+                <span>→</span>
+                <span>الرجوع إلى المدونة</span>
+            </a>
+
+            <div class="flex flex-wrap items-center gap-3 mb-4">
+                <span class="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/30">مكتمل</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl font-black text-zinc-100 leading-tight mb-3 drop-shadow-lg">
+                كالتنين: صفر
+            </h1>
+            <p class="text-warning font-bold text-base sm:text-lg mb-6 drop-shadow-[0_0_8px_rgba(255,204,0,0.3)]">
+                龍が如く0
+            </p>
+
+            <div class="flex items-center gap-4 text-[12px] text-zinc-600 font-bold tracking-wide mb-10 pb-6 border-b border-zinc-900/60">
+                <span>30 يونيو 2026</span>
+                <span class="w-1 h-1 rounded-full bg-zinc-700"></span>
+                <span>فريق الوكر</span>
+            </div>
+
+<div class="article-hero glass-panel rounded-xl h-48 sm:h-64 mb-12 flex items-center justify-center overflow-hidden">
+    <img src="rgg.jpg" alt="كالتنين" class="h-full w-full object-cover">
+</div>
+
+<article class="article-body text-zinc-400 text-base sm:text-[17px]">
+<p>هذه ترجمة لِـ«<strong>كالتنين 0</strong>»، وهي إلى التوطين أقرب من النقل الحرفي. وعنوانها بالعربية هو ترجمة لعنوانها الياباني، خلافًا لما ذهبت إليه «أطلس» وهو ما اشتهر عندنا بتسمية «ياكوزا». فاخترنا أن نسمّيه بما سمّاه به أهله أنفسهم. وهؤلاء قومٌ من أهل اليابان كانوا أشبه بالشطّار، اتخذوا علامة الخسارة في القمار اسمًا لهم، فصار النحس عندهم فخرًا والخسارة عزًّا. فعرّبنا اسمهم بـ<strong>«أصحاب الخُسّر</strong>»، وعليه اعتمدنا.</p>
+<p>وأما كلامهم فلا يستقيم نقله إلا بكلام الشارع والأزقة وما تحت السرّة. وقد خالفني في هذا أخي عزوز، فأنكر ما رأيتُ صوابه، وأبى أن يُعين على تعريب العمل وبرمجته إلا أن أرضى بشرطه. فأجبته ونزلت عند رأيه، وله من الكرم وطيب النفس أنه غضّ الطرف عن أمرٍ لست بذاكره.</p>
+<p>فجاءت الترجمة بلسان أولي البأس وبما يجري على ألسنة الغلاظ الشداد ممن خشنت طباعهم، لا بحديث أهل الرقّة واللين، ولا بكلام أبطال القصص المرسومة وما يُحكى للصغار. فما راقكم منها فانشروه، وما ثَقُل على نفوسكم فاطرحوه، واعذرونا فيما زلّت به أناملنا، فالعاملون على هذا العمل بشرٌ لا آلات صمّاء. ولو علمتم ما لقيناه في إنجازه لرفعتم من قدرنا، ولكففتم عنا الأذى واللوم.</p>
+<p>وإنّا نبرأ إلى الله مما قد يكون في هذا العمل من قولٍ أو فعل، فمن قاده هواه إلى مواضع الريبة، وفتح بنفسه أبوابًا غير هذه، فإثمه عليه وحده، ولا تحمل نفسٌ وزر أخرى.</p>
+<p>والسلام.</p>
+</article>
+            <!-- قسم فريق العمل -->
+            <section class="mt-16 pt-10 border-t border-zinc-900/60">
+                <div class="text-zinc-500 text-[13px] font-bold tracking-widest uppercase px-1 mb-2 border-r-2 border-warning pr-2">
+                    العاملون عليها
+                </div>
+                <p class="text-sm text-zinc-500 mb-8">
+                   أسماؤهم وسبل الوصول إليهم.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+
+                    <div class="text-zinc-500 text-[11px] font-bold tracking-widest uppercase mb-1 sm:col-span-2 mt-2 first:mt-0">الترجمة</div>
+
+                    <div class="glass-panel rounded-xl p-4 flex items-center gap-4">
+                        <div class="avatar-ring w-11 h-11 rounded-full flex items-center justify-center font-black text-warning shrink-0">١</div>
+                        <div class="min-w-0">
+                            <div class="font-bold text-zinc-200 text-sm truncate">فُلان الفلاني (شيخ الجراد)</div>
+                            <div class="role-badge text-zinc-500 uppercase">@fulanumoto</div>
+                        </div>
+                    </div>
+
+                    <div class="text-zinc-500 text-[11px] font-bold tracking-widest uppercase mb-1 sm:col-span-2 mt-4">التعديل والبرمجة</div>
+
+                    <div class="glass-panel rounded-xl p-4 flex items-center gap-4">
+                        <div class="avatar-ring w-11 h-11 rounded-full flex items-center justify-center font-black text-warning shrink-0">١</div>
+                        <div class="min-w-0">
+                            <div class="font-bold text-zinc-200 text-sm truncate">عبد العزيز</div>
+                            <div class="role-badge text-zinc-500 uppercase">@B90097605</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-xl p-4 flex items-center gap-4">
+                        <div class="avatar-ring w-11 h-11 rounded-full flex items-center justify-center font-black text-warning shrink-0">٢</div>
+                        <div class="min-w-0">
+                            <div class="font-bold text-zinc-200 text-sm truncate">ماجد العتيبي</div>
+                            <div class="role-badge text-zinc-500 uppercase">@Majid_KSA</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-xl p-4 flex items-center gap-4">
+                        <div class="avatar-ring w-11 h-11 rounded-full flex items-center justify-center font-black text-warning shrink-0">٣</div>
+                        <div class="min-w-0">
+                            <div class="font-bold text-zinc-200 text-sm truncate">رؤوف</div>
+                            <div class="role-badge text-zinc-500 uppercase">@Ra0ufK</div>
+                        </div>
+                    </div>
+
+                    <div class="text-zinc-500 text-[11px] font-bold tracking-widest uppercase mb-1 sm:col-span-2 mt-4">الاختبار والمراجعة</div>
+
+                    <div class="glass-panel rounded-xl p-4 flex items-center gap-4">
+                        <div class="avatar-ring w-11 h-11 rounded-full flex items-center justify-center font-black text-warning shrink-0">١</div>
+                        <div class="min-w-0">
+                            <div class="font-bold text-zinc-200 text-sm truncate">a</div>
+                            <div class="role-badge text-zinc-500 uppercase">@iiizyh</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-xl p-4 flex items-center gap-4">
+                        <div class="avatar-ring w-11 h-11 rounded-full flex items-center justify-center font-black text-warning shrink-0">٢</div>
+                        <div class="min-w-0">
+                            <div class="font-bold text-zinc-200 text-sm truncate">فيصل</div>
+                            <div class="role-badge text-zinc-500 uppercase">@KozukiFaisal</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-xl p-4 flex items-center gap-4">
+                        <div class="avatar-ring w-11 h-11 rounded-full flex items-center justify-center font-black text-warning shrink-0">٣</div>
+                        <div class="min-w-0">
+                            <div class="font-bold text-zinc-200 text-sm truncate">Hussein</div>
+                            <div class="role-badge text-zinc-500 uppercase">@shakabrah97</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-xl p-4 flex items-center gap-4">
+                        <div class="avatar-ring w-11 h-11 rounded-full flex items-center justify-center font-black text-warning shrink-0">٤</div>
+                        <div class="min-w-0">
+                            <div class="font-bold text-zinc-200 text-sm truncate">عمر (لم ينقل لنا شيئًا :( )</div>
+                            <div class="role-badge text-zinc-500 uppercase">@511ontop</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- قسم التنزيل والتركيب -->
+            <section class="mt-16 pt-10 border-t border-zinc-900/60">
+                <div class="text-zinc-500 text-[13px] font-bold tracking-widest uppercase px-1 mb-2 border-r-2 border-warning pr-2">
+                    التنزيل والتركيب
+                </div>
+                <p class="text-sm text-zinc-500 mb-8">
+                    اختر الرابط المطابق لنسخة لعبتك. ثم ملف التحديث.
+                </p>
+
+                <!-- بطاقات التنزيل حسب النسخة -->
+                <div class="grid sm:grid-cols-3 gap-4 mb-6">
+                    <a href="https://mega.nz/file/GtRm3QKL#tv_2k_2aMmv0FrLPT1Z0aDH-ih1kSBtcuBNwY58yJaY" target="_blank" rel="noopener noreferrer" class="download-card glass-panel rounded-xl p-6 flex flex-col">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="font-bold text-zinc-200 text-sm">نسخة ستيم</span>
+                            <span class="text-[10px] font-bold text-warning bg-warning/10 px-2 py-0.5 rounded border border-warning/30">Steam</span>
+                        </div>
+                        <p class="text-xs text-zinc-500 mb-4 flex-grow">التعريب الكامل المخصص لنسخة Steam من اللعبة.</p>
+                        <span class="block text-center text-xs font-bold text-dark bg-warning rounded-lg py-2.5 transition-transform group-hover:scale-105">نزّل من Mega</span>
+                    </a>
+
+                    <a href="https://mega.nz/file/T1ZyAZJZ#IkVEYrs-TJ8zwUjGkCQAx8CoOSmdKtAZNeUMK4c39To" target="_blank" rel="noopener noreferrer" class="download-card glass-panel rounded-xl p-6 flex flex-col">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="font-bold text-zinc-200 text-sm">النسخة المقرصنة</span>
+                            <span class="text-[10px] font-bold text-zinc-400 bg-zinc-900/80 px-2 py-0.5 rounded border border-zinc-800/60">كركر</span>
+                        </div>
+                        <p class="text-xs text-zinc-500 mb-4 flex-grow">لمن قرصنها فقرًا.</p>
+                        <span class="block text-center text-xs font-bold text-dark bg-warning rounded-lg py-2.5">نزّل من Mega</span>
+                    </a>
+
+                    <a href="https://mega.nz/file/a5hQETyR#yr8x-XYIisrzeAvoL24wBUXsLYshpfnOdMGzy_DT7KY" target="_blank" rel="noopener noreferrer" class="download-card glass-panel rounded-xl p-6 flex flex-col">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="font-bold text-zinc-200 text-sm">نسخة GOG</span>
+                            <span class="text-[10px] font-bold text-zinc-400 bg-zinc-900/80 px-2 py-0.5 rounded border border-zinc-800/60">GOG</span>
+                        </div>
+                        <p class="text-xs text-zinc-500 mb-4 flex-grow">التعريب الكامل المخصص لنسخة GOG من اللعبة.</p>
+                        <span class="block text-center text-xs font-bold text-dark bg-warning rounded-lg py-2.5">نزّل من Mega</span>
+                    </a>
+                </div>
+
+                <!-- التحديث وملف الخط -->
+                <div class="grid sm:grid-cols-2 gap-4 mb-10">
+                    <a href="https://mega.nz/file/m0gnjCJB#IQKb4625D6SyEE-JWUCeWOjmBkCUR0snkbkdWu3lVLs" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-xl p-6 flex items-center justify-between gap-4">
+                        <div>
+                            <div class="font-bold text-zinc-200 text-sm mb-1">تحديث التعريب</div>
+                            <p class="text-xs text-zinc-500">تصحيحات النصوص والأخطاء بعد الإصدار الأول. استبدل ما عندك من ملفات بهذه.</p>
+                        </div>
+                        <span class="text-xs font-bold text-warning shrink-0">نزّل ←</span>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1Oo4PhPwsVgQq2ONRkm60s6Q4FZYbWoMj/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-xl p-6 flex items-center justify-between gap-4">
+                        <div>
+                            <div class="font-bold text-zinc-200 text-sm mb-1">ملف الخط القديم (اختياري)</div>
+                            <p class="text-xs text-zinc-500">خط جمالي بديل، لا يُنصح به لصغر حجمه.</p>
+                        </div>
+                        <span class="text-xs font-bold text-warning shrink-0">نزّل ←</span>
+                    </a>
+                </div>
+
+                <!-- فيديو استعراض -->
+                <div class="glass-panel rounded-xl p-6 sm:p-8 mb-10">
+                    <h3 class="font-black text-zinc-100 text-lg mb-1">استعراض التعريب</h3>
+                    <p class="text-xs text-zinc-500 mb-5">مقطع يُظهر التعريب داخل اللعبة.</p>
+                    <div class="rounded-lg overflow-hidden border border-zinc-800/60" style="aspect-ratio: 16/9;">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/Oq2V7Fxai6M" title="استعراض تعريب كالتنين: صفر" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- خطوات التركيب -->
+                <div class="glass-panel rounded-xl p-6 sm:p-8">
+                    <h3 class="font-black text-zinc-100 text-lg mb-6">خطوات التركيب</h3>
+
+                    <ol class="space-y-5">
+                        <li class="flex gap-4">
+                            <span class="step-num w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shrink-0">١</span>
+                            <div>
+                                <p class="text-sm text-zinc-300 font-bold mb-1">نزّل ملف التعريب المطابق لنسختك</p>
+                                <p class="text-xs text-zinc-500 leading-relaxed">اختر بطاقة حسب مصدر لعبتك (ستيم أو GOG أو المقرصنة)، فالملفات مختلفة بين النسخ.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="step-num w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shrink-0">٢</span>
+                            <div>
+                                <p class="text-sm text-zinc-300 font-bold mb-1">فك ضغط الملف</p>
+                                <p class="text-xs text-zinc-500 leading-relaxed">استخدم أي برنامج فك ضغط، واحتفظ بالمجلد الناتج كما هو دون تغيير أسماء الملفات.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="step-num w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shrink-0">٣</span>
+                            <div>
+                                <p class="text-sm text-zinc-300 font-bold mb-1">انسخ الملفات إلى مجلد اللعبة</p>
+                                <p class="text-xs text-zinc-500 leading-relaxed">ضع محتويات المجلد داخل مسار تثبيت اللعبة، وأكّد على استبدال الملفات. (من الأحسن نسخ ملفاتك الأصلية وحفظها في مكان آخر قبل هذه العملية).</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="step-num w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shrink-0">٤</span>
+                            <div>
+                                <p class="text-sm text-zinc-300 font-bold mb-1">شغّل اللعبة</p>
+                                <p class="text-xs text-zinc-500 leading-relaxed">الآن تظهر لك اللعبة بالعربية.</p>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <div class="mt-7 pt-6 border-t border-zinc-900/60">
+                        <p class="text-xs font-bold text-zinc-400 mb-1">ملاحظة</p>
+                        <p class="text-xs text-zinc-500 leading-relaxed">
+                            عند تنزيل التحديث، ابدأ من خطوة النسخ. فلا حاجة لتكرار الخطوات من البداية.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="mt-16 pt-8 border-t border-zinc-900/60 flex justify-between items-center">
+                <a href="https://arraqim.github.io/alwakr/zero/" class="glass-panel rounded-lg px-5 py-3 text-sm font-bold text-zinc-300 hover:text-warning transition-colors">
+                    صفحة المشروع
+                </a>
+            </div>
+
+        </main>
+
+        <footer class="mt-auto py-8 text-center text-zinc-600 text-[11px] tracking-widest border-t border-zinc-900/60 w-full">
+            © 2077 نصف الحقوق محفوظة
+            <br>
+            <span class="text-zinc-700">فريق تابع للرَّقيم.</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>
