@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+#wrapper{ background-image:url(../img/movie/back.jpg);
+	min-height:900px;
+}
+#main{
+	height:100%;
+	position:absolute;
+	top:0; left:50%;
+	margin-left:-360px;
+	width:870px;
+}
+#main h2{
+	position:absolute;
+	left:0; top:34px;
+	display:block;
+}
+.sub-menu{
+	position:absolute;
+	left:0;
+	top: 37%;
+	margin-top:-248px;
+}
+.sub-menu li{
+	margin-bottom:10px;
+	padding:1px;
+	cursor:pointer;
+	background-color:#756e51;
+}
+.movies{
+	display:none;
+	position:absolute;
+	left:262px; top: 37%;
+	margin-top:-248px;
+}
+#movies0{
+	display:block
+}
+.movies h3{
+	position:absolute;
+	top:-32px; left:0;
+	height:22px;
+}
+.movies h3 img{
+	vertical-align:top
+}
+.movies h3 span{
+	display:inline-block;
+	height:22px; line-height:22px;
+	border-left:2px solid #756e51;
+	margin-left:1em; padding-left:1em;
+}
+.movie{
+	float:left;
+	margin-left:13px;
+	margin-bottom:13px;
+	padding:1px;
+	width:294px; height:165px;
+	background-color:#b0a67a;
+}
+.movie.left,
+#movies0 .movie{
+	margin-left:0;
+}
+.movie.center{
+	margin-left:231px;
+	margin-bottom:0px;
+}
+.movie a{
+	width:294px; height:165px;
+	overflow:hidden;
+	display:block;
+	margin:0 auto;
+	position:relative;
+}
+#movies0 .movie{
+	width:604px;
+	height:339px;
+}
+#movies0 .movie a{
+	width:604px;
+	height:339px;
+}
+.movie a .new{
+	position:absolute;
+	color:#d80000;
+	font-size:14px;
+	bottom:10px;
+}
+.movie a img{
+	width:100%;
+}

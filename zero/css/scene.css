@@ -1,0 +1,204 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrapper{ 
+	background-image:url(../img/scene/back.jpg);
+	min-height:945px;
+}
+
+#main{
+	position:absolute;
+	top:0; left:50%;
+	margin-left:-345px;
+	width:690px;
+	padding-top:73px;
+	height:auto;
+}
+#main h2{
+	position:absolute;
+	left:0; top:34px;
+	display:block;}
+
+.sub-menu dd{
+	background-color:#81795a;
+}
+#sub-menu-top {
+	margin-bottom:38px;
+}
+#sub-menu-top dl dt{
+	margin-bottom:43px;
+}
+#sub-menu-top dl dd{
+	float:left;
+	margin-right:8px;
+	margin-bottom:8px;
+	padding:3px;
+	position:relative;
+}
+#sub-menu-top dl .last{
+	margin-right:0;
+}
+#sub-menu-top dl dd.new:after{
+	content:"";
+	display:block;
+	background:url(../img/game_system/icon-new2.png) no-repeat;
+	width:64px; height:31px;
+	position:absolute;
+	top:3px; left:3px;
+}
+#sub-menu-bottom dl{
+	float:left;
+	margin-left:45px;
+	width:200px;
+	margin-bottom:29px;
+}
+.substory #sub-menu-bottom dl{
+	width:328px;
+	margin-bottom:0;
+}
+#sub-menu-bottom dl.left{
+	margin-left:0;
+}
+#sub-menu-bottom dl dt{
+	margin-bottom:6px;
+}
+#sub-menu-bottom dl dd{
+	padding:2px;
+	margin-bottom:6px;
+	position:relative;
+}
+#sub-menu-bottom dl dd.new:after{
+	content:"";
+	display:block;
+	background:url(../img/scene/icon-new.png) no-repeat;
+	width:42px; height:42px;
+	position:absolute;
+	top:2px; left:2px;
+}
+#sub-menu-bottom dl dd.last{
+	margin-bottom:0;
+}
+.sub-menu ul li{
+	margin-left:12px;
+	float:left;
+}
+.sub-menu ul li:first-child{
+	margin-left:0;
+}
+.sub-nav {
+	padding-top: 38px;
+	border-top: 2px dotted #808080;
+	margin-top:46px;
+}
+.substory .sub-nav {
+	margin-top: 18px;
+}
+.sub-nav ul li{
+	float:left;
+	margin-left:25px;
+	vertical-align:middle;
+	height:24px;
+}
+.sub-nav ul li:first-child{
+	margin-left:0;
+}
+.sub-nav ul li:before{
+	content:">";
+	font-family:"ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	color:#bbb082;
+	margin-right:0.5em;
+	font-size:17px;
+	line-height:24px;
+	vertical-align:middle;
+}
+.sub-nav ul li:first-child:before{
+	content:"<";
+}
+.sub-nav ul li a{
+	display:inline-block;
+	height:24px;
+}
+.sub-nav ul li.visit a{
+	opacity:0.4
+}
+.thumbs-playspot{
+	margin-top:10px;
+}
+.thumbs-playspot ul{
+	margin-bottom:5px;
+}
+.thumbs-playspot ul li{
+	float:left;
+	margin-left:5px;
+}
+.thumbs-playspot ul li:first-child{
+	margin-left:0
+}
+.thumbs-playspot ul li a{
+	display:inline-block;
+	background-color:#b4ab83;
+	padding:1px;
+	width:132px; height:73px;
+	display:block;
+}
+.thumbs-playspot ul li a img{
+	width:132px;
+}
+
+
+#tokyo{	background-image:url(../img/scene/tokyo/visual.jpg);}
+#osaka{	background-image:url(../img/scene/osaka/visual.jpg);}
+
+#overcontent h2{
+	position:absolute;
+	top:34px; left:170px;
+}
+#overcontent .detail .thumbs{
+	left:184px;
+}
+#overcontent #tokyo .thumbs,
+#overcontent #osaka .thumbs{
+	top:415px;
+}
+#overcontent .detail .sentence{
+	position:absolute;
+	top:164px; right:88px;
+	width:560px;
+	line-height:2;
+	letter-spacing:1px;
+}
+.lt-800 #overcontent .detail#tokyo .sentence{
+	overflow:hidden;
+	height:70%;
+	width:570px;
+}
+#overcontent #play_spot .inner .thumbs ul{
+	margin-top:6px;
+}
+#overcontent #play_spot .inner .thumbs ul li{
+	margin-left:6px
+}
+#overcontent #app .inner .thumbs ul{
+	margin-top:21px;
+}
+#overcontent #app .inner .thumbs ul li{
+	margin-left:23px
+}
+
+#overcontent #play_spot .inner,
+#overcontent #tieup .inner{
+	padding-top:110px;
+}
+#overcontent #tieup .thumbs ul{
+	margin-top:11px;
+}
+#overcontent #tieup .thumbs ul li{
+	margin-left:11px;
+}
+
+.substory #overcontent .thumbs ul {
+	margin-top: 14px;
+}
+.substory #overcontent .thumbs ul:first-child {
+	margin-top:0; margin-bottom:0;
+}

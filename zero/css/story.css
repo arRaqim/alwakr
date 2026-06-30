@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* CSS Document */
+#wrapper{ background-image:url(../img/story/back.jpg);}
+
+#main{
+	height:100%;
+	position:absolute;
+	top:0; left:50%;
+	margin-left:-348px;
+	width:720px;
+	padding-left:180px;
+}
+.story #main{
+	padding-left:0px;
+}
+#main.gt-950{
+	width:574px; 
+}
+
+#main h2{
+	position:absolute;
+	left:0; top:30px;
+	display:block;
+}
+#main h3{
+	position:absolute;
+	left:0; top:60px;
+	display:block;
+}
+
+#main ul.menu{
+	padding-top:180px;
+}
+#main ul.menu li{
+	margin-top:30px;
+	position:relative;
+}
+#main ul.menu li:first-child{
+	margin-top:0;
+}
+#main ul.sub-menu{
+	position:absolute;
+	left:0;
+	top:144px;
+}
+#main ul.sub-menu li{
+	margin-bottom:15px;
+}
+#main ul.sub-menu li a img{
+	height:24px; width:auto
+}
+#main ul li .new{
+	position:absolute;
+	top:-20px; left:30px;
+	color:#d80000;
+	font-size:15px;
+}
+
+.sentence{
+	top:60px;
+	position:relative;
+	height:73%;
+	max-height:720px;
+	overflow:hidden;
+}
+.gt-945 .sentence{
+}
+.sentence .page{
+	position:absolute;
+	top:0; left:0;
+	display:none;
+}
+.view-page1 .page1,
+.view-page2 .page2,
+.view-page3 .page3,
+.view-page4 .page4,
+.view-page5 .page5,
+.view-page6 .page6,
+.view-page7 .page7,
+.view-page8 .page8,
+.view-page9 .page9,
+.view-page10 .page10{
+	display:block;
+}
+.gt-950 .sentence{
+	overflow-y:auto;
+}
+.sentence p{
+	padding:1em 0;
+	letter-spacing:1px;
+}
+.sentence p:first-child{
+	padding-top:0;
+}
+
+.sentence .thumbs{
+	padding-top:1em;
+}
+.sentence .thumbs ul{
+	margin-bottom:4px;
+}
+.sentence .thumbs ul:first-child{
+	margin-bottom:26px;
+}
+.sentence .thumbs ul:last-child{
+	margin-bottom:0px;
+}
+.sentence .thumbs ul li{
+	background-color:#b0a67a;
+	padding:1px;
+	float:left;
+	margin-left:4px;
+}
+.sentence .thumbs ul li:first-child{
+	margin-left:0 !important;
+}
+
+.paging{
+	font-size:13px;
+	position:absolute;
+	right:0; top:86%
+}
+.view-page1 .paging:before{content:"الصفحة 1";}
+.view-page2 .paging:before{content:"الصفحة 2";}
+.view-page3 .paging:before{content:"الصفحة 3";}
+.view-page4 .paging:before{content:"الصفحة 4";}
+.view-page5 .paging:before{content:"الصفحة 5";}
+.view-page6 .paging:before{content:"الصفحة 6";}
+.view-page7 .paging:before{content:"الصفحة 7";}
+.view-page8 .paging:before{content:"الصفحة 8";}
+.view-page9 .paging:before{content:"الصفحة 9";}
+.view-page10 .paging:before{content:"الصفحة 10";}
+
+.buttons{
+	position:absolute;
+	left:180px; top:84%
+}
+.buttons .button{
+	position:relative;
+	display:inline-block;
+	padding:0 1em;
+	font-size:16px;
+	line-height:27px;
+	background-color:#12110d;
+	margin-right:4px;
+	transition:background-color ease 300ms;
+}
+.buttons .button span{
+	font-family:"ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	font-size:13px;
+	color:#bbb082;
+}
+.buttons .button:hover{
+	background-color:#be0000;
+	cursor:pointer;
+}
+.view-page1 .buttons .button-prev{
+	display:none;
+}
+.story-0 .view-page3 .buttons .button-next{
+	display:none;
+}
+.story-1 .view-page10 .buttons .button-next{
+	display:none;
+}
+.story-2 .view-page5 .buttons .button-next{
+	display:none;
+}

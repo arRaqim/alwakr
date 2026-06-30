@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrapper{ background-image:url(../img/cast/back.jpg);}
+#wrapper.kiryu{ background-image:url(../img/cast/kiryu/back.jpg);}
+#wrapper.majima{ background-image:url(../img/cast/majima/back.jpg);}
+
+#btn-kiryu,
+#btn-majima,
+#main h2,
+.sub-menu{
+	position:absolute;
+	top:50%; left:50%;
+}
+#main h2{
+	top:32px;
+	margin-left:-360px;
+}
+#btn-kiryu{
+	margin-top:-51px;
+	margin-left:-348px;
+}
+#btn-majima{
+	margin-top:-51px;
+	margin-left:23px;
+}
+#btn-kiryu .button,
+#btn-majima .button{
+	position:absolute;
+	display:inline-block;
+	padding:0 1em;
+	font-size:14px;
+	line-height:23px;
+	background-color:#12110d;
+	margin-right:4px;
+	transition:background-color ease 300ms;
+	bottom:-35px;
+}
+#btn-kiryu .button{
+	right:-10px;
+}
+#btn-majima .button{
+	left:-10px;
+}
+#btn-kiryu .button span,
+#btn-majima .button span{
+	font-family:"ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	font-size:13px;
+	color:#bbb082;
+}
+#btn-kiryu:hover .button,
+#btn-majima:hover .button{
+	background-color:#be0000;
+	cursor:pointer;
+}
+
+
+#kiryu1{	background-image:url(../img/cast/kiryu/1/visual.jpg);}
+#kiryu2{	background-image:url(../img/cast/kiryu/2/visual.jpg);}
+#kiryu3{	background-image:url(../img/cast/kiryu/3/visual.jpg);}
+#kiryu4{	background-image:url(../img/cast/kiryu/4/visual.jpg);}
+#kiryu5{	background-image:url(../img/cast/kiryu/5/visual.jpg);}
+#kiryu6{	background-image:url(../img/cast/kiryu/6/visual.jpg);}
+#kiryu7{	background-image:url(../img/cast/kiryu/7/visual.jpg);}
+#kiryu8{	background-image:url(../img/cast/kiryu/8/visual.jpg);}
+#kiryu9{	background-image:url(../img/cast/kiryu/9/visual.jpg);}
+#kiryu10{	background-image:url(../img/cast/kiryu/10/visual.jpg);}
+#kiryu11{	background-image:url(../img/cast/kiryu/11/visual.jpg);}
+#kiryu12{	background-image:url(../img/cast/kiryu/12/visual.jpg);}
+#kiryu13{	background-image:url(../img/cast/kiryu/13/visual.jpg);}
+#majima1{ background-image:url(../img/cast/majima/1/visual.jpg);}
+#majima2{ background-image:url(../img/cast/majima/2/visual.jpg);}
+#majima3{ background-image:url(../img/cast/majima/3/visual.jpg);}
+#majima4{ background-image:url(../img/cast/majima/4/visual.jpg);}
+#majima5{ background-image:url(../img/cast/majima/5/visual.jpg);}
+#majima6{ background-image:url(../img/cast/majima/6/visual.jpg);}
+#majima7{ background-image:url(../img/cast/majima/7/visual.jpg);}
+#majima8{ background-image:url(../img/cast/majima/8/visual.jpg);}
+
+.sub-menu {
+	margin-top:-154px;
+}
+#sub-menu-kiryu{
+	margin-left:-302px;
+}
+#sub-menu-majima{
+	margin-left:-206px;
+}
+.sub-menu ul{
+	float:left;
+}
+.sub-menu ul li{
+	margin-left:12px;
+	float:left;
+	background-color:#81795a;
+	position:relative;
+}
+.sub-menu ul li.new:after{
+	position:absolute;
+	content:"";
+	top:1px; left:1px;
+	background:url(../img/cast/icon-new.png) no-repeat;
+	width:49px; height:21px;
+}
+.sub-menu ul li:first-child{
+	margin-left:0;
+}
+
+#overcontent h2{
+	position:absolute;
+	top:87px; left:90px;
+	height:20px;
+	overflow:hidden;
+}
+#overcontent .detail .sentence{
+	position:absolute;
+	top:141px; right:44px;
+	line-height:2;
+	width:496px;
+}
+.lt-800 #overcontent .detail .sentence{
+	height:70%;
+	overflow:hidden;
+	width:506px;
+}
+#overcontent #kiryu1 .thumbs,
+#overcontent #majima1 .thumbs{
+	top:501px
+}

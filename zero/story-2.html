@@ -1,0 +1,210 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>موقع كالتنين صفر | بالعربية</title>
+<meta http-equiv="Content-Language" content="ar" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="ROBOTS" content="NOODP" />
+<meta name="author" content="SEGA" />
+<meta name="copyright" content="SEGA" />
+
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<!--[if lt IE 8]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js%3Fv=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css%3Fv=2.1.5" media="screen" />
+<!-- Add Media helper (this is optional) -->
+
+<script type="text/javascript" src="js/perfect-scrollbar.js"></script>
+<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar.css">
+<script type="text/javascript" src="https://use.typekit.net/waq7joy.js"></script>
+<script type="text/javascript" src="js/jquery.backgroundSize.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	
+	var currentPage = 1;
+	_gaq.push(['_trackPageview', '/zero/story-prologue1.html']);
+	$(".button-next").on("click", function(){changePage(true)});
+	$(".button-prev").on("click", function(){changePage(false)});
+	var changePage = function(isNext){
+		$main.removeClass("view-page"+currentPage);
+		if(isNext) currentPage++;
+		else currentPage--;
+		_gaq.push(['_trackPageview', '/zero/story-kiryu'+currentPage+'.html']);
+		$main.addClass("view-page"+currentPage);
+		$(".sentence").scrollTop(0);
+	}
+	
+	$(".sentence").on("mouseover",function(){
+		$('.sentence').perfectScrollbar('update');
+	})
+	$('.sentence').perfectScrollbar({wheelSpeed:50});		
+	
+});
+</script>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/story.css">
+<style>
+    /* 1. إجبار الخلفية السوداء المعتمة على تغطية الشاشة بالكامل */
+    .fancybox-overlay {
+        z-index: 99999 !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    /* 2. حل مشكلة عدم التوسط: إجبار نافذة الصورة على التوسط في الشاشة دائماً 100% */
+    .fancybox-wrap {
+        z-index: 100000 !important;
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        -webkit-transform: translate(-50%, -50%) !important;
+        -moz-transform: translate(-50%, -50%) !important;
+        margin: 0 !important; /* إلغاء الهوامش الديناميكية الخاطئة */
+    }
+
+    /* 3. حل مشكلة تغير مكان الزر: تثبيته في أعلى يمين الشاشة بشكل دائم */
+    .fancybox-close {
+        z-index: 100010 !important;
+        position: fixed !important; /* جعله ثابتاً بالنسبة للشاشة وليس للصورة */
+        top: 25px !important;
+        right: 25px !important;
+        background: #e74c3c !important; /* لون أحمر واضح جداً */
+        border-radius: 50%;
+        width: 40px !important;
+        height: 40px !important;
+        cursor: pointer !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* رسم حرف X داخل الزر الثابت */
+    .fancybox-close::before {
+        content: "×";
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        line-height: 0;
+    }
+</style>
+</head>
+<body>
+<div id="wrapper" class="story-2">
+	
+	<div id="nav">
+		<ul id="menu">
+			<li><a href="index.html"><img src="img/common/menu-top.png" alt="TOP"/></a></li>
+			<li class="visit"><a><img src="img/common/menu-story.png" alt="STORY"/></a></li>
+			<li><a href="cast.html"><img src="img/common/menu-cast.png" alt="CAST"/></a></li>
+		</ul>
+		<div id="menu2">
+			<h2 lang="en">تنزيل التعريب</h2>
+			<p><div class="link-portal"><a href="https://arraqim.github.io/alwakr/" target="_blank"></a></div></p>
+		</div>
+	</div>>
+	
+	<div id="main" class="view-page1">
+		<h2><img src="img/story/title.png" alt=""/></h2>
+		<h3><img src="img/story/2/title.png" alt=""/></h3>
+		<ul class="sub-menu">
+			<li><a href="story-0.html"><img src="img/story/menu0.png" width="296" height="49" alt=""/></a></li>
+			<li><a href="story-1.html"><img src="img/story/menu1.png" width="296" height="49" alt=""/></a></li>
+		</ul>
+		<div class="sentence">
+			<div class="page1 page">
+				<p><img src="img/story/2/text1.png" alt=""/></p>
+				<div class="thumbs clearfix">
+					<ul class="clearfix">
+						<li><a href="img/story/2/ss1-1.jpg" class="fader fancybox" rel="1"><img src="img/story/2/thumb1-1.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss1-2.jpg" class="fader fancybox" rel="1"><img src="img/story/2/thumb1-2.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="page2 page">
+				<p><img src="img/story/2/text2.png" alt=""/></p>
+				<div class="thumbs clearfix">
+					<ul class="clearfix">
+						<li><a href="img/story/2/ss2-1.jpg" class="fader fancybox" rel="2"><img src="img/story/2/thumb2-1.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss2-2.jpg" class="fader fancybox" rel="2"><img src="img/story/2/thumb2-2.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss2-3.jpg" class="fader fancybox" rel="2"><img src="img/story/2/thumb2-3.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss2-4.jpg" class="fader fancybox" rel="2"><img src="img/story/2/thumb2-4.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss2-5.jpg" class="fader fancybox" rel="2"><img src="img/story/2/thumb2-5.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss2-6.jpg" class="fader fancybox" rel="2"><img src="img/story/2/thumb2-6.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss2-7.jpg" class="fader fancybox" rel="2"><img src="img/story/2/thumb2-7.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="page3 page">
+				<p><img src="img/story/2/text3.png" alt=""/></p>
+				<div class="thumbs clearfix">
+					<ul class="clearfix">
+						<li><a href="img/story/2/ss3-1.jpg" class="fader fancybox" rel="3"><img src="img/story/2/thumb3-1.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss3-2.jpg" class="fader fancybox" rel="3"><img src="img/story/2/thumb3-2.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss3-3.jpg" class="fader fancybox" rel="3"><img src="img/story/2/thumb3-3.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss3-4.jpg" class="fader fancybox" rel="3"><img src="img/story/2/thumb3-4.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss3-5.jpg" class="fader fancybox" rel="3"><img src="img/story/2/thumb3-5.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss3-6.jpg" class="fader fancybox" rel="3"><img src="img/story/2/thumb3-6.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss3-7.jpg" class="fader fancybox" rel="3"><img src="img/story/2/thumb3-7.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="page4 page">
+				<p><img src="img/story/2/text4.png" alt=""/></p>
+				<div class="thumbs clearfix">
+					<ul class="clearfix">
+						<li><a href="img/story/2/ss4-1.jpg" class="fader fancybox" rel="4"><img src="img/story/2/thumb4-1.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss4-2.jpg" class="fader fancybox" rel="4"><img src="img/story/2/thumb4-2.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="page5 page">
+				<p><img src="img/story/2/text5.png" alt=""/></p>
+				<div class="thumbs clearfix">
+					<ul class="clearfix">
+						<li><a href="img/story/2/ss5-1.jpg" class="fader fancybox" rel="5"><img src="img/story/2/thumb5-1.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss5-2.jpg" class="fader fancybox" rel="5"><img src="img/story/2/thumb5-2.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss5-3.jpg" class="fader fancybox" rel="5"><img src="img/story/2/thumb5-3.jpg" alt=""/></a></li>
+						<li><a href="img/story/2/ss5-4.jpg" class="fader fancybox" rel="5"><img src="img/story/2/thumb5-4.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="paging">/5</div>
+		<div class="buttons">
+			<a class="button button-next" lang="ar"><span>&lt;</span> التالية</a><!--
+			--><a class="button button-prev" lang="ar">السابقة <span>&gt;</span></a>
+		</div>
+	</div>
+
+	
+</div>
+<!-- Google Code for http://ryu-ga-gotoku.com/ Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1010521566;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "6u94CJKkwgIQ3qvt4QM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+</body>
+</html>

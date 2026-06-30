@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>موقع كالتنين صفر | بالعربية</title>
+<meta http-equiv="Content-Language" content="ar" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="ROBOTS" content="NOODP" />
+<meta name="author" content="SEGA" />
+<meta name="copyright" content="SEGA" />
+
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<!--[if lt IE 8]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="js/perfect-scrollbar.js"></script>
+<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar.css">
+<script type="text/javascript" src="https://use.typekit.net/waq7joy.js"></script>
+<script type="text/javascript" src="js/jquery.backgroundSize.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	
+	var currentPage = 1;
+	_gaq.push(['_trackPageview', '/zero/story-prologue1.html']);
+	$(".button-next").on("click", function(){changePage(true)});
+	$(".button-prev").on("click", function(){changePage(false)});
+	var changePage = function(isNext){
+		$main.removeClass("view-page"+currentPage);
+		if(isNext) currentPage++;
+		else currentPage--;
+		_gaq.push(['_trackPageview', '/zero/story-prologue'+currentPage+'.html']);
+		$main.addClass("view-page"+currentPage);
+		$(".sentence").scrollTop(0);
+	}
+	
+	$(".sentence").on("mouseover",function(){
+		$('.sentence').perfectScrollbar('update');
+	})
+	$('.sentence').perfectScrollbar({wheelSpeed:50});		
+	
+});
+</script>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/story.css">
+</head>
+<body>
+<div id="wrapper" class="story-0">
+	
+	<div id="nav">
+		<ul id="menu">
+			<li><a href="index.html"><img src="img/common/menu-top.png" alt="TOP"/></a></li>
+			<li class="visit"><a><img src="img/common/menu-story.png" alt="STORY"/></a></li>
+			<li><a href="cast.html"><img src="img/common/menu-cast.png" alt="CAST"/></a></li>
+		</ul>
+	    <div id="menu2">
+			<h2 lang="en">تنزيل التعريب</h2>
+			<p><div class="link-portal"><a href="https://arraqim.github.io/alwakr/" target="_blank"></a></div></p>
+		</div>
+	</div>
+	
+	<div id="main" class="view-page1">
+		<h2><img src="img/story/title.png" alt=""/></h2>
+		<h3><img src="img/story/0/title.png" alt=""/></h3>
+		<ul class="sub-menu">
+			<li><a href="story-1.html"><img src="img/story/menu1.png" width="296" height="49" alt=""/></a></li>
+			<li><a href="story-2.html"><img src="img/story/menu2.png" width="296" height="49" alt=""/></a></li>
+		</ul>
+		<div class="sentence">
+			<div class="page1 page">
+				<p><img src="img/story/0/text1.png" alt=""/></p>
+			</div>
+			<div class="page2 page">
+				<p><img src="img/story/0/text2.png" alt=""/></p>
+			</div>
+			<div class="page3 page">
+				<p><img src="img/story/0/text3.png" alt=""/></p>
+			</div>
+		</div>
+		<div class="paging">/5</div>
+		<div class="buttons">
+			<a class="button button-next" lang="ar"><span>&lt;</span> التالية</a><!--
+			--><a class="button button-prev" lang="ar">السابقة <span>&gt;</span></a>
+		</div>
+	</div>
+
+	
+</div>
+<!-- Google Code for http://ryu-ga-gotoku.com/ Remarketing List -->
+</body>
+</html>

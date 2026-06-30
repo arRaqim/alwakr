@@ -1,0 +1,226 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrapper{ 
+	background-image:url(../img/game_system/back.jpg);
+	min-height:880px;
+}
+
+#main{
+	position:absolute;
+	top:0; left:50%;
+	margin-left:-345px;
+	width:690px;
+	padding-top:73px;
+	height:auto;
+}
+.money #main{	background:url(../img/game_system/money/character.png) right 15px no-repeat;}
+.lady #main{	background:url(../img/game_system/lady/character.png) right 15px no-repeat;}
+.violence #main{	background:url(../img/game_system/violence/character.png) right 15px no-repeat;}
+#main h2{
+	position:absolute;
+	left:0; top:34px;
+	display:block;}
+
+.sub-menu dd{
+	background-color:#81795a;
+}
+#sub-menu-top {
+	padding-bottom:46px;
+	border-bottom:2px dotted #808080;
+	margin-bottom:38px;
+}
+#sub-menu-top dl dt{
+	margin-bottom:43px;
+}
+#sub-menu-top dl dd{
+	float:left;
+	margin-right:45px;
+	padding:3px;
+	position:relative;
+}
+#sub-menu-top dl dd.new:after{
+	content:"";
+	display:block;
+	background:url(../img/game_system/icon-new2.png) no-repeat;
+	width:64px; height:31px;
+	position:absolute;
+	top:3px; left:3px;
+}
+#sub-menu-top dl .last{
+	margin-right:0;
+}
+#sub-menu-bottom dl{
+	float:left;
+	margin-left:45px;
+	width:200px;
+}
+#sub-menu-bottom dl.left{
+	margin-left:0;
+}
+#sub-menu-bottom dl dt{
+	margin-bottom:6px;
+}
+#sub-menu-bottom dl dd{
+	padding:2px;
+	margin-bottom:14px;
+	position:relative;
+}
+#sub-menu-bottom dl dd.new:after{
+	content:"";
+	display:block;
+	background:url(../img/game_system/icon-new2.png) no-repeat;
+	width:64px; height:31px;
+	position:absolute;
+	top:2px; left:2px;
+}
+#sub-menu-bottom dl dd.last{
+	margin-bottom:0;
+}
+.sub-menu ul li{
+	margin-left:12px;
+	float:left;
+}
+.sub-menu ul li:first-child{
+	margin-left:0;
+}
+
+.sub-nav ul li{
+	float:left;
+	margin-left:25px;
+	vertical-align:middle;
+	height:24px;
+}
+.sub-nav ul li:first-child{
+	margin-left:0;
+}
+.sub-nav ul li:before{
+	content:">";
+	font-family:"ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	color:#bbb082;
+	margin-right:0.5em;
+	font-size:17px;
+	line-height:24px;
+	vertical-align:middle;
+}
+.sub-nav ul li:first-child:before{
+	content:"<";
+}
+.sub-nav ul li a{
+	display:inline-block;
+	height:24px;
+}
+.sub-nav ul li.visit a{
+	opacity:0.4
+}
+
+.violence #overcontent .thumbs ul{
+	margin-top:14px;
+}
+
+
+#overcontent h2{
+	position:absolute;
+	top:34px; left:170px;
+}
+#overcontent .detail .thumbs{
+	left:184px;
+}
+#overcontent #tokyo .thumbs,
+#overcontent #osaka .thumbs{
+	top:415px;
+}
+#overcontent .detail .sentence{
+	position:absolute;
+	top:164px; right:88px;
+	width:560px;
+	line-height:2;
+	letter-spacing:1px;
+}
+.lt-800 #overcontent .detail#tokyo .sentence{
+	overflow:hidden;
+	height:70%;
+	width:570px;
+}
+#overcontent .boxes > ul{
+	margin-bottom:24px;
+}
+#overcontent .boxes > ul.last{
+	margin-bottom:0px;
+}
+#overcontent .boxes > ul > li{
+	background-color:#4a402a;
+	display:block;
+	float:left;
+	width:244px;
+	margin-right:24px;
+	padding:11px 13px 15px;
+}
+#overcontent .boxes > ul > li.last{
+	margin-right:0;
+}
+#overcontent .boxes > ul > li h3{
+	margin-bottom:11px;
+}
+#overcontent .boxes > ul > li .thumbs ul li{
+	margin-left:15px;
+}
+#overcontent .boxes > ul > li .thumbs ul li.btn-exp{
+	width:68px; height:69px;
+	background-color:#bbb082;
+	padding:1px;
+}
+#overcontent .boxes > ul > li .thumbs ul li.btn-exp a{
+	display:block;
+	height:100%; width:100%;
+	background:url(../img/game_system/money/btn-exp.gif) no-repeat;
+}
+
+#overcontent .three_style dl{
+	float:left;
+	width:400px;
+}
+#overcontent .three_style dl:first-child{
+	margin-right:29px;
+	padding-right:30px;
+	border-right:1px solid #bbb082;
+}
+#overcontent .three_style dl dt{
+	margin-bottom:10px;
+}
+#overcontent .three_style dl dd{
+	margin-bottom:14px;
+	background-color:#6e6952;
+	position:relative;
+	padding:1px;
+}
+#overcontent .three_style dl dd h3{
+	padding-bottom:10px;
+	border-bottom:1px solid #bbb082;
+	margin-bottom:10px;
+}
+
+#overcontent .thumbs ul.first {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+#overcontent .thumbs ul.second li{
+	margin-left:7px;
+}
+#overcontent .thumbs ul.third{
+	margin-top:39px;
+}
+
+#overcontent #violence2-1 .left,
+#overcontent #violence2-2 .left,
+#overcontent #violence2-3 .left,
+#overcontent #violence2-4 .left,
+#overcontent #violence2-5 .left,
+#overcontent #violence2-6 .left{
+	padding-bottom:130px;
+}
+
+#overcontent a.btn-back{
+	display:inline-block;
+	margin-top:48px;
+}

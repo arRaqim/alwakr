@@ -1,0 +1,332 @@
+body, html{
+	width:100%;
+	height:100%;
+	font-size:16px;
+	font-family:"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho",  serif;
+	color:#1e1e1e;
+	line-height:1.6;
+	background-color:#fafafa;
+}
+a{
+	color:#fff;
+}
+
+*[lang="en"]{
+  font-family: "minion-pro", serif;
+}
+
+.fader{
+	transition:opacity ease 500ms;
+}
+.fader:hover{
+	opacity:0.6;
+	filter:alpha(opacity=70);
+}
+
+#wrapper{
+	width:100%;
+	height:100%;
+	min-width:1200px;
+	min-height:684px;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+	position:relative;
+	overflow:hidden;
+}
+
+#nav{
+	z-index:2;
+	position:absolute;
+	left:20px; top:60px;
+}
+.lt-800 #nav{
+	top:10px; 
+}
+#nav #menu li{
+	position:relative;
+	padding-left:9px;
+	height:33px;
+	margin-bottom:18px;
+}
+.lt-800 #nav #menu li{
+	height:32px;
+	margin-bottom:13px;
+}
+.gt-945 #nav #menu li{
+	margin-bottom:21px;
+	height:40px;
+}
+#nav #menu li:before{
+	display:block;
+	height:100%; width:1px;
+	position:absolute;
+	top:0; left:0;
+	background-color:#81795a;
+	content:"";
+}
+#nav #menu li a{
+	height:100%;
+	display:block;
+	display:table-cell;
+	vertical-align:middle;
+	position:relative;
+}
+#nav #menu li:first-child{
+	padding-left:3px;
+}
+#nav #menu li:first-child:before{
+	display:none;
+}
+#nav #menu li a .new{
+	position:absolute;
+	top:0px; right:-40px;
+	color:#d80000;
+	font-size:14px;
+	line-height:19px;
+}
+#nav #menu li a .new.mini{
+	font-size:9px;
+	right:-28px;
+}
+.gt-945 #nav #menu li a .new{
+	font-size:18px;
+	line-height:22px;
+	right:-50px;
+}
+.gt-945 #nav #menu li a .new.mini{
+	font-size:10px;
+	right:-30px;
+}
+/*
+#nav #menu li img[alt="STORY"] + .new,
+#nav #menu li img[alt="CAST"] + .new,
+#nav #menu li img[alt="SCENE"] + .new,
+#nav #menu li img[alt="MOVIE"] + .new{ left:4em;}
+#nav #menu li img[alt="GAME SYSTEM"] + .new{ left:10.7em;}
+#nav #menu li img[alt="SPEC"] + .new{ left:7.2em;}
+#nav #menu li img[alt="NEWS"] + .new{ left:6.2em;}
+*/
+#nav #menu li a img{
+	transition:opacity ease 250ms;
+	height:32px;
+}
+#nav #menu li:first-child a img{
+	height:9px;
+}
+#nav #menu li:first-child,
+.gt-945 #nav #menu li a img{
+	height:auto;
+}
+#nav #menu li a:hover img,
+#nav #menu li.visit a img{
+	opacity:0.4;
+}
+#nav #menu li.blank a img{
+	opacity:1;
+}
+#nav #menu2{
+}
+#nav #menu2 h2{
+	font-size:12px;
+	margin-bottom:5px;
+}
+.lt-800 #nav #menu2 h2{
+	margin-bottom:0;
+}
+#nav #menu2 #share{
+	margin-bottom:15px;
+}
+.lt-800 #nav #menu2 #share{
+	margin-bottom:10px;
+}
+#nav #menu2 #share li{
+	float:left;
+	margin-right:10px;
+	background-color:#81795a;
+}
+#nav #menu2 #share li a,
+#nav #menu2 .link-portal a{
+	display:block;
+	transition:opacity 250ms ease;
+}
+#nav #menu2 .link-portal{
+	padding:1px;
+	background-color:#81795a;
+	display:inline-block;
+}
+#nav #menu2 .link-portal a{
+	display:block;
+	width:188px; height:64px;
+	background:url(../img/common/banner-portal.jpg) no-repeat;
+}
+#nav #menu2 #share li a:hover,
+#nav #menu2 .link-portal a:hover{
+	opacity:0.6;
+	filter: alpha(opacity=60); /* IE lt 8 */
+}
+#nav #menu2 #share li a img{
+	display:block;
+}
+.lt-800 #nav #menu2 .link-portal a{
+	background-image:url(../img/common/banner-portal-mini.jpg);
+}
+
+#main{
+	height:100%; width:100%;
+	position:relative;
+	z-index:1;
+}
+
+#overcontent{
+	width:100%; height:100%;
+	position:absolute;
+	top:0; left:0;
+	background-color:#fafafa;
+	z-index:-1;
+	transition:all ease 500ms;
+	opacity:0;
+	filter:alpha(opacity=0);
+	-ms-filter: "alpha(opacity=0)"; /* IE 8 */
+}
+#overcontent.visible{
+	opacity:1;
+	filter:alpha(opacity=100);
+	-ms-filter: "alpha(opacity=100)"; /* IE 8 */
+	z-index:10;
+}
+#overcontent > div{
+	height:100%; width:1200px;
+	max-height:945px;
+	position:absolute;
+	top:0; left:50%;
+	margin-left:-600px;
+}
+.gt-945 #overcontent > div{
+	top:50%;
+	margin-top:-472px;
+}
+#overcontent .detail{
+	height:100%; width:100%;
+	position:relative;
+	display:none;
+	background-repeat:no-repeat;
+}
+#overcontent .detail.current{
+	display:block;
+}
+#overcontent #btn-close{
+  font-family: "minion-pro", serif;
+	font-size:10px;
+	position:absolute;
+	right:170px; top:40px;
+	padding-top:50px;
+	width:43px;
+	text-align:center;
+	letter-spacing:1px;
+}
+#overcontent #btn-close:hover{
+	cursor:pointer;
+}
+#overcontent #btn-close:before{
+	content:"";
+	width:100%; height:43px;
+	background:url(../img/common/close.png) no-repeat center top;
+	position:absolute;
+	top:0; left:0;
+}
+#overcontent .thumbs{
+	position:absolute;
+	top:406px; left:89px;
+	width:320px
+}
+#overcontent .thumbs ul{
+	margin-bottom:4px;
+}
+#overcontent .thumbs ul:first-child{
+	margin-bottom:26px;
+}
+#overcontent .thumbs ul:last-child{
+	margin-bottom:0px;
+}
+#overcontent .thumbs ul li{
+	background-color:#b0a67a;
+	padding:1px;
+	float:left;
+	margin-left:4px;
+}
+#overcontent .thumbs ul li:first-child{
+	margin-left:0 !important;
+}
+#overcontent .detail .inner{
+	width:860px;
+	margin:0 auto;
+	padding-top:69px;
+}
+#overcontent .detail .inner dl dt{
+	margin-bottom:37px;
+}
+#overcontent .detail .inner dl{
+	margin-bottom:40px;
+}
+#overcontent .inner .col2 dd{
+	float:left;
+}
+#overcontent .inner .col2 dd.left{
+	margin-right:27px;
+	padding-right:26px;
+	border-right:1px solid #bbb082;
+}
+#overcontent .inner .col2 dd.right{
+	width:485px;
+}
+#overcontent .inner .col2 dd.right ul {
+	margin-top:45px;
+}
+#overcontent .inner .col2 dd.right ul li{
+	margin-top:8px;
+}
+#overcontent .inner .col2 dd.right ul li:first-child{
+	margin-top:0;
+}
+#overcontent .detail .inner .thumbs{
+	position:static;
+}
+#overcontent .detail .inner > .thumbs{
+	width:auto;
+}
+
+#footer{
+	width:100%;
+	position:absolute;
+	left:0px; bottom:0px;
+	background-color:#424242;
+	background-color:rgba(23, 23, 23, 0.8);
+	padding-bottom:10px;
+	padding-top:10px;
+	z-index:100
+}
+#footer .logo-mini{
+	display:inline-block;
+	margin-left:10px;
+}
+#footer .logo-mini img{
+	max-height:201px;
+}
+
+
+#footer .release{
+	float:left;
+	margin-left:16px;
+}
+#footer .copyright{
+	float:left;
+	margin-top:18px;
+	margin-left:25px;
+	height:27px; width:662px;
+	background:url(../img/common/copyright.png) no-repeat left center;
+}
+#footer .banner-ch{
+	position:absolute;
+	right:16px; bottom:15px;
+}

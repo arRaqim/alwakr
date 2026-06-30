@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+body,html{
+	height:100%;
+}
+body{
+	font-size:13px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	background-color:#ffffff;
+}
+
+
+h1{
+	position:static;
+	text-align:center;
+	margin-bottom:32px;
+}
+
+
+#contents{
+	width:776px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom:15px;
+}
+
+#contents ul li{
+	width:760px; height:219px;
+	display:block;
+	padding:8px;
+	background:url(../img/news/back.png) no-repeat;
+	margin-bottom:6px;
+}
+#contents ul li .left{
+	float:left;
+	width:196px;
+	padding:19px;
+}
+#contents ul li .left a{
+	display:block;
+	margin-top:2px;
+}
+#contents ul li .right{
+	padding:19px;
+}
+#contents ul li .right h2{
+	font-size:16px;
+	vertical-align:middle;
+	color:#213844;
+	font-weight:bold;
+}
+#contents ul li .right p.period{
+	background-color:#213844;
+	font-size:14px;
+	padding:0.5em 1em;
+	line-height:1em;
+	color:#fff;
+	margin:0.5em 0 0.5em 215px ;
+}
+#contents ul li .right p.cp_detail{
+	font-size:12px;
+}
+#contents p.gotop{
+	text-align:right;
+	margin-top:60px;
+}
+
+
+
+/*footer*/
+
+#footer{
+	background:#000000;	
+}
+
+#footer p{
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+}

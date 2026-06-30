@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+body,html{
+	height:auto;
+}
+body{
+	font-size:16px;
+	line-height:2;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	background:url(../img/game_system/app/back.gif) repeat;
+}
+
+#wrapper{
+	background:url(../img/dlc/back.jpg) no-repeat center top;
+	height:auto;
+}
+
+
+h1{
+	position:relative;
+	left:-8px; top:0;
+	text-align:center;}
+
+
+#contents{
+	width:944px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom:55px;
+}
+
+.prc #downlord,
+.dlc #product{
+	display:none;
+}
+
+.changebtn .btn{
+	width:471px; height:58px;
+	float:left;
+}
+.changebtn .btn:hover{
+	cursor:pointer;
+}
+.changebtn .btn-dlc{
+	background:url(../img/dlc/btn-dlc.jpg) no-repeat
+}
+.changebtn .btn-dlc{
+	margin-right:2px;
+}
+.dlc .changebtn .btn-dlc,
+.changebtn .btn-dlc:hover{
+	background:url(../img/dlc/btn-dlc-visit.jpg);
+}
+.changebtn .btn-prc{
+	background:url(../img/dlc/btn-prc.jpg) no-repeat
+}
+.prc .changebtn .btn-prc,
+.changebtn .btn-prc:hover{
+	background:url(../img/dlc/btn-prc-visit.jpg)
+}
+
+.btn-about{
+	margin:27px 0;
+	display:block;
+	width:233px;
+}
+
+#downlord .content{
+	/* box-shadow */
+	box-shadow:rgba(0, 0, 0, 0.2) 0px 0px 5px 3px;
+	-webkit-box-shadow:rgba(0, 0, 0, 0.2) 0px 0px 5px 3px;
+	-moz-box-shadow:rgba(0, 0, 0, 0.2) 0px 0px 5px 3px;
+	position:relative;
+	margin-bottom:50px;
+}
+#downlord .thumbs{
+	position:absolute;
+	top:80px;
+}
+#downlord .thumbs1{	left:19px}
+#downlord .thumbs2{	left:477px}
+#downlord .double .thumbs li{
+	float:left;
+}
+#downlord .thumbs li:first-child{
+	margin-bottom:7px;
+}
+#downlord .double .thumbs li:first-child{
+	margin-bottom:0px;
+	margin-right:2px;
+}
+#downlord .thumbs li a{
+	display:block;
+	width:222px; height:152px;
+}
+
+#product{
+	margin-top:27px;
+}
+#product .content{
+	width:884px;
+	padding:29px;
+	background:#202020 url(../img/dlc/back-dragon.jpg) right top no-repeat;
+	color:#ffffff;
+	margin-top:30px;
+}
+#product #content0{
+	margin-top:0;
+	border:1px solid #434343;
+	background:#ffffff;
+}
+#product .content p{
+	margin-bottom:40px;
+}
+#product .content .track{
+	font-size:14px;
+	margin-bottom:0;
+	line-height:1.7;
+}
+#product .content p a{
+	color:#ff0000;
+}
+
+#product h2{
+	margin-bottom:40px;
+}
+
+#product .thumbs ul li{
+	float:left;
+	margin-left:16px;
+}
+
+#product .thumbs ul li.left{
+	margin-left:0 !important;
+}
+#product .thumbs ul li a{
+	display:block;
+	padding:1px;
+	background-color:#95896f;
+}
+
+#product #content0 #flow {
+	background-color:#4a4437;
+	border:3px solid #95896f;
+	padding:25px 24px;
+}
+#product #content0 #flow ul{
+	background:url(../img/dlc/flow-base.gif) no-repeat;
+}
+#product #content0 .thumbs ul{
+	padding-top:47px;
+}
+#product #content0 .thumbs ul li {
+	margin-left:36px;
+}
+#product #content0 .thumbs ul li a{
+	padding:2px;
+	background-color:#efe8ac;
+}
+
+
+/*footer*/
+
+#footer{
+	background:#000000;
+	position:static;
+}
+
+#footer p{
+	width:944px;
+	margin-left:auto;
+	margin-right:auto;
+}

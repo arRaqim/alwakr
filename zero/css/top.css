@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrapper{ background-image:url(../img/top/back.jpg);}
+h1{
+	position:absolute;
+	top:50%; left:36%;
+	max-height:506px;
+	max-width:535px;
+	height:50.4%;
+}
+
+#banners{
+	position:absolute;
+	bottom:115px; left:20px;
+	width:394px;
+	z-index:100;
+}
+#banners h2{
+	font-size:12px;
+	color:#6a5d3a;
+}
+#banners ul li{
+	float:left;
+	margin:0 7px 10px 0;
+}
+#banners a{
+	display:block;
+	padding:1px;
+	background-color:#67614a;
+}
+#banners a img{
+	width:188px; height:64px;
+}
+#banners a:first-child{
+	margin-bottom:0px;
+}
+.lt-800 #banners{
+	bottom:108px;
+	width:250px;
+}
+.lt-800 #banners ul li{
+	margin:0 7px 7px 0;
+}
+.lt-800 #banners img{
+	width:auto; height:38px;
+}
+
+.bannerArea {
+	position: fixed;
+	right: 10px;
+	/* bottom: 10px; */
+	bottom: 115px;
+	z-index: 2;
+}
+
+.bannerArea__close-btn {
+	cursor: pointer;
+	margin-left: auto;
+	margin-bottom: 2px;
+	width: 30px;
+}
+
+.bannerArea-contents {
+	width: 460px;
+}
+
+.bannerArea__image {
+	display: block;
+	width: 100%;
+}
+
+#footer{
+	padding-top:0
+}
+
+.whatsnew{ 
+	line-height:21px;
+	border-bottom:1px solid #75736e;
+	padding:7px 18px;
+	overflow:hidden;
+	margin-bottom:9px;
+}
+.whatsnew h2{
+	font-size:14px;
+	color:#d4caad;
+	float:left;
+	border-right:1px solid #75736e;
+	padding-right:12px;
+}
+.whatsnew ul{
+	float:left;
+	padding-left:12px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:11px;
+	color:#ffffff;
+}
+
+.zero-directorscut {
+	opacity: 0 !important;
+	transition: all 1200ms ease-in-out;
+}
+
+.zero-directorscut.on {
+	opacity: 1 !important;
+}
+
+.zero-directorscut img {
+	width: 100%;
+}

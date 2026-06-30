@@ -1,0 +1,236 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>موقع كالتنين صفر | بالعربية</title>
+<meta http-equiv="Content-Language" content="ar" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="ROBOTS" content="NOODP" />
+<meta name="author" content="SEGA" />
+<meta name="copyright" content="SEGA" />
+
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<!--[if lt IE 8]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+<![endif]-->
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js%3Fv=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css%3Fv=2.1.5" media="screen" />
+<!-- Add Media helper (this is optional) -->
+
+<script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-media.js%3Fv=1.0.6"></script>
+<script type="text/javascript" src="js/perfect-scrollbar.js"></script>
+<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar.css">
+<script type="text/javascript" src="https://use.typekit.net/waq7joy.js"></script>
+<script type="text/javascript" src="js/jquery.backgroundSize.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+		$(".sentence").on("mouseover",function(){
+      $('.sentence').perfectScrollbar('update');
+		})
+    $('.sentence').perfectScrollbar({wheelSpeed:50});		
+	});
+</script>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/cast.css">
+<style>
+    /* 1. إجبار الخلفية السوداء المعتمة على تغطية الشاشة بالكامل */
+    .fancybox-overlay {
+        z-index: 99999 !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    /* 2. حل مشكلة عدم التوسط: إجبار نافذة الصورة على التوسط في الشاشة دائماً 100% */
+    .fancybox-wrap {
+        z-index: 100000 !important;
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        -webkit-transform: translate(-50%, -50%) !important;
+        -moz-transform: translate(-50%, -50%) !important;
+        margin: 0 !important; /* إلغاء الهوامش الديناميكية الخاطئة */
+    }
+
+    /* 3. حل مشكلة تغير مكان الزر: تثبيته في أعلى يمين الشاشة بشكل دائم */
+    .fancybox-close {
+        z-index: 100010 !important;
+        position: fixed !important; /* جعله ثابتاً بالنسبة للشاشة وليس للصورة */
+        top: 25px !important;
+        right: 25px !important;
+        background: #e74c3c !important; /* لون أحمر واضح جداً */
+        border-radius: 50%;
+        width: 40px !important;
+        height: 40px !important;
+        cursor: pointer !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* رسم حرف X داخل الزر الثابت */
+    .fancybox-close::before {
+        content: "×";
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        line-height: 0;
+    }
+</style>
+</head>
+<body>
+<div id="wrapper" class="majima">
+	
+	<div id="nav">
+		<ul id="menu">
+			<li><a href="index.html"><img src="img/common/menu-top.png" alt="TOP"/></a></li>
+			<li><a href="story.html"><img src="img/common/menu-story.png" alt="STORY"/></a></li>
+			<li class="visit"><a><img src="img/common/menu-cast.png" alt="CAST"/></a></li>
+		</ul>
+		<div id="menu2">
+			<h2 lang="ar">تنزيل التعريب</h2>
+			<p><div class="link-portal"><a href="https://arraqim.github.io/alwakr/" target="_blank"></a></div></p>
+		</div>
+	</div>
+	
+	<div id="main">
+		<h2><img src="img/cast/title.png" alt=""/></h2>
+		<div class="sub-menu" id="sub-menu-majima">
+			<div class="clearfix">
+			<ul class="clearfix">
+				<li><a href="#majima1" class="oc-button fader" onClick="_gaq.push(['_trackPageview', '/zero/cast-majima1.html']);"><img src="img/cast/majima/menu1.jpg" alt=""/></a></li>
+				<li><a href="#majima2" class="oc-button fader" onClick="_gaq.push(['_trackPageview', '/zero/cast-majima2.html']);"><img src="img/cast/majima/menu2.jpg" alt=""/></a></li>
+				<li><a href="#majima3" class="oc-button fader" onClick="_gaq.push(['_trackPageview', '/zero/cast-majima3.html']);"><img src="img/cast/majima/menu3.jpg" alt=""/></a></li>
+				<li><a href="#majima4" class="oc-button fader" onClick="_gaq.push(['_trackPageview', '/zero/cast-majima4.html']);"><img src="img/cast/majima/menu4.jpg" alt=""/></a></li>
+				<li><a href="#majima5" class="oc-button fader" onClick="_gaq.push(['_trackPageview', '/zero/cast-majima5.html']);"><img src="img/cast/majima/menu5.jpg" alt=""/></a></li>
+				<li><a href="#majima6" class="oc-button fader" onClick="_gaq.push(['_trackPageview', '/zero/cast-majima6.html']);"><img src="img/cast/majima/menu6.jpg" alt=""/></a></li>
+				<li><a href="#majima7" class="oc-button fader" onClick="_gaq.push(['_trackPageview', '/zero/cast-majima7.html']);"><img src="img/cast/majima/menu7.jpg" alt=""/></a></li>
+				<li><a href="#majima8" class="oc-button fader" onClick="_gaq.push(['_trackPageview', '/zero/cast-majima8.html']);"><img src="img/cast/majima/menu8.jpg" alt=""/></a></li>
+			</ul>
+			</div>
+		</div>
+	</div>
+		
+	<div id="overcontent">
+		<div>
+			<div id="majima1" class="detail">
+				<div class="thumbs clearfix">
+					<ul>
+						<li><a href="img/cast/majima/1/ss1.jpg" class="fader fancybox" rel="1"><img src="img/cast/majima/1/thumb1.jpg" alt=""/></a></li>
+						<li><a href="img/cast/majima/1/ss2.jpg" class="fader fancybox" rel="1"><img src="img/cast/majima/1/thumb2.jpg" alt=""/></a></li>
+						<li><a href="img/cast/majima/1/ss3.jpg" class="fader fancybox" rel="1"><img src="img/cast/majima/1/thumb3.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+				<div class="sentence">
+					<p><img src="img/cast/majima/1/text.png" alt=""/></p>
+				</div>
+			</div>
+			<div id="majima2" class="detail">
+				<div class="thumbs clearfix">
+					<ul>
+						<li><a href="img/cast/majima/2/ss1.jpg" class="fader fancybox" rel="2"><img src="img/cast/majima/2/thumb1.jpg" alt=""/></a></li>
+						<li><a href="img/cast/majima/2/ss2.jpg" class="fader fancybox" rel="2"><img src="img/cast/majima/2/thumb2.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+				<div class="sentence">
+					<p><img src="img/cast/majima/2/text.png" alt=""/></p>
+				</div>
+			</div>
+			<div id="majima3" class="detail">
+				<div class="thumbs clearfix">
+					<ul>
+						<li><a href="img/cast/majima/3/ss1.jpg" class="fader fancybox" rel="3"><img src="img/cast/majima/3/thumb1.jpg" alt=""/></a></li>
+						<li><a href="img/cast/majima/3/ss2.jpg" class="fader fancybox" rel="3"><img src="img/cast/majima/3/thumb2.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+				<div class="sentence">
+					<p><img src="img/cast/majima/3/text.png" alt=""/></p>
+				</div>
+			</div>
+			<div id="majima4" class="detail">
+				<div class="thumbs clearfix">
+					<ul>
+						<li><a href="img/cast/majima/4/ss1.jpg" class="fader fancybox" rel="4"><img src="img/cast/majima/4/thumb1.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+				<div class="sentence">
+					<p><img src="img/cast/majima/4/text.png" alt=""/></p>
+				</div>
+			</div>
+			<div id="majima5" class="detail">
+				<div class="thumbs clearfix">
+					<ul>
+						<li><a href="img/cast/majima/5/ss1.jpg" class="fader fancybox" rel="5"><img src="img/cast/majima/5/thumb1.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+				<div class="sentence">
+					<p><img src="img/cast/majima/5/text.png" alt=""/></p>
+				</div>
+			</div>
+			<div id="majima6" class="detail">
+				<div class="thumbs clearfix">
+					<ul>
+						<li><a href="img/cast/majima/6/ss1.jpg" class="fader fancybox" rel="6"><img src="img/cast/majima/6/thumb1.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+				<div class="sentence">
+					<p><img src="img/cast/majima/6/text.png" alt=""/></p>
+				</div>
+			</div>
+			<div id="majima7" class="detail">
+				<div class="thumbs clearfix">
+					<ul>
+						<li><a href="img/cast/majima/7/ss1.jpg" class="fader fancybox" rel="7"><img src="img/cast/majima/7/thumb1.jpg" alt=""/></a></li>
+						<li><a href="img/cast/majima/7/ss2.jpg" class="fader fancybox" rel="7"><img src="img/cast/majima/7/thumb2.jpg" alt=""/></a></li>
+						<li><a href="img/cast/majima/7/ss3.jpg" class="fader fancybox" rel="7"><img src="img/cast/majima/7/thumb3.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+				<div class="sentence">
+					<p><img src="img/cast/majima/7/text.png" alt=""/></p>
+				</div>
+			</div>
+			<div id="majima8" class="detail">
+				<div class="thumbs clearfix">
+					<ul>
+						<li><a href="img/cast/majima/8/ss1.jpg" class="fader fancybox" rel="8"><img src="img/cast/majima/8/thumb1.jpg" alt=""/></a></li>
+						<li><a href="img/cast/majima/8/ss2.jpg" class="fader fancybox" rel="8"><img src="img/cast/majima/8/thumb2.jpg" alt=""/></a></li>
+						<li><a href="img/cast/majima/8/ss3.jpg" class="fader fancybox" rel="8"><img src="img/cast/majima/8/thumb3.jpg" alt=""/></a></li>
+					</ul>
+				</div>
+				<div class="sentence">
+					<p><img src="img/cast/majima/8/text.png" alt=""/></p>
+				</div>
+			</div>
+			<h2><img src="img/cast/title.png" alt=""/></h2>
+			<div id="btn-close" class="fader">اغلق</div>
+		</div>
+	</div>
+	
+</div>
+<!-- Google Code for http://ryu-ga-gotoku.com/ Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1010521566;
+var google_conversion_language = "ar";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "6u94CJKkwgIQ3qvt4QM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+</body>
+</html>
