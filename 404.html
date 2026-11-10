@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>٤٠٤ | الوكر للتعريبات</title>
+    <meta name="theme-color" content="#070708">
+    <meta name="robots" content="noindex">
+    <script>
+        // تُعرض هذه الصفحة على أي مسار، فنحدد الجذر لتعمل الروابط النسبية
+        document.write('<base href="' + (location.pathname.indexOf('/alwakr/') === 0 ? '/alwakr/' : '/') + '">');
+    </script>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/wakr.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <style>
+        .lost {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            min-height: 100svh;
+            padding: 96px var(--gutter) 40px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .lost__lines {
+            position: absolute;
+            inset: 90px var(--gutter) 0;
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            pointer-events: none;
+        }
+
+        .lost__lines i {
+            border-top: 1px solid var(--line);
+            transform: scaleX(0);
+            animation: rule 1.2s var(--ease) forwards;
+            animation-delay: calc(var(--i) * .12s);
+        }
+
+        .lost__lines i:first-child { border-color: rgba(236, 232, 223, .4); }
+
+        @keyframes rule { to { transform: scaleX(1); } }
+
+        .lost__stage {
+            position: absolute;
+            left: 50%;
+            bottom: -16vh;
+            perspective: 1400px;
+            transform: translateX(-50%);
+        }
+
+        .lost__fall { transform-style: preserve-3d; animation: fall 1.6s cubic-bezier(.3, 0, .2, 1) .5s both; }
+
+        @keyframes fall {
+            0% { transform: translateY(-120vh) rotate(-30deg); }
+            62% { transform: translateY(0) rotate(4deg); }
+            78% { transform: translateY(-5vh) rotate(-2deg); }
+            100% { transform: translateY(0) rotate(0); }
+        }
+
+        .lost .disc { --size: min(62vh, 78vw); --rx: 52deg; --ry: -8deg; --rz: 0deg; }
+        .lost .disc__face { animation: discspin 14s linear infinite; }
+
+        .lost__text { position: relative; z-index: 3; margin-top: -18vh; }
+
+        .lost h1 {
+            margin: 0;
+            font-weight: 900;
+            font-size: clamp(96px, 20vw, 240px);
+            line-height: 1.1;
+            opacity: 0;
+            animation: up 1s var(--ease) .2s forwards;
+        }
+
+        .lost p {
+            margin: 4px 0 26px;
+            font-size: clamp(18px, 2.2vw, 24px);
+            font-weight: 700;
+            color: var(--fg-2);
+            opacity: 0;
+            animation: up 1s var(--ease) .4s forwards;
+        }
+
+        .lost .btn { opacity: 0; animation: up 1s var(--ease) .6s forwards; }
+
+        @keyframes up {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body class="page-lost">
+
+    <div class="ambient"></div>
+    <div class="grain"></div>
+
+    <nav class="nav glass" aria-label="الرئيسية">
+        <a class="nav__brand" href="./"><img src="assets/logo.svg" alt="الوكر" width="30" height="30"></a>
+        <a class="nav__link" href="./">الأقراص</a>
+        <a class="nav__link" href="blog/">الإصدارات</a>
+        <a class="nav__link" href="./#about">من أنتم</a>
+    </nav>
+
+    <main class="lost">
+        <div class="lost__lines" aria-hidden="true">
+            <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i>
+        </div>
+
+        <div class="lost__text">
+            <h1>٤٠٤</h1>
+            <p>لا شيء هنا. ربما خُدش القرص.</p>
+            <a class="btn" href="./"><i class="ico i--right" aria-hidden="true"></i>الرجوع إلى الأقراص</a>
+        </div>
+
+        <div class="lost__stage" aria-hidden="true">
+            <div class="lost__fall">
+                <div data-disc data-type="black" data-ink="٤٠٤" data-ink2="خُدش القرص" data-rim="الصفحة غير موجودة  ·  الوكر  ·  لا للحكر"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/wakr.js"></script>
+</body>
+</html>
