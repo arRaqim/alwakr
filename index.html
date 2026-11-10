@@ -4,185 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الوكر للتعريبات</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="الوكر -لا للحكر-: فريق لتعريب الألعاب وتعديلها.">
+    <meta name="theme-color" content="#070708">
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/wakr.css">
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        warning: '#FFCC00',
-                        dark: '#060608',
-                    },
-                    fontFamily: {
-                        sans: ['Cairo', 'sans-serif'],
-                    }
-                }
-            }
-        }
+        document.documentElement.classList.add('js');
+        try { if (!sessionStorage.getItem('wakr:seen')) document.documentElement.classList.add('first-visit'); } catch (e) {}
     </script>
-    <style>
-        /* إعدادات الخلفية */
-        body {
-            background-color: #060608 !important;
-            /* صورة خلفية برمجية/داكنة مع تدرج تعتيم قوي */
-            background-image: linear-gradient(to bottom, rgba(6, 6, 8, 0.88), rgba(6, 6, 8, 0.98)), 
-                              url('wallhaven-853z1o.jpg') !important;
-            background-size: cover !important;
-            background-position: center !important;
-            background-attachment: fixed !important;
-        }
-
-        /* تأثير التشويش (Grain) */
-        .grain-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0.05;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        }
-
-        /* التأثير الزجاجي (Glassmorphism) */
-        .glass-panel {
-            background: linear-gradient(135deg, rgba(20, 20, 25, 0.6) 0%, rgba(10, 10, 12, 0.8) 100%);
-            border: 1px solid rgba(63, 63, 70, 0.3);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-        }
-
-        /* تأثير التوهج باللون الأصفر التحذيري عند تمرير الفأرة */
-        .glass-panel:hover {
-            border-color: rgba(255, 204, 0, 0.4);
-            box-shadow: 0 0 25px rgba(255, 204, 0, 0.15);
-            transform: translateY(-2px);
-        }
-        
-        /* تلوين التحديد */
-        ::selection {
-            background-color: #FFCC00;
-            color: #000;
-        }
-
-
-    </style>
 </head>
-<body class="min-h-screen text-gray-400 font-sans antialiased relative overflow-x-hidden">
+<body class="page-home">
 
-    <div class="grain-overlay"></div>
+    <div class="ambient"></div>
+    <div class="grain"></div>
 
-    <div class="relative z-10 flex flex-col min-h-screen">
-        
-        <nav class="sticky top-4 z-50 max-w-4xl mx-auto w-full px-4 sm:px-6 py-3 sm:py-4 glass-panel rounded-2xl flex justify-between items-center transition-all duration-300">
-    <div class="flex items-center gap-2 sm:gap-3 cursor-pointer">
-        <img src="path1-3.svg" alt="شعار الوكر" class="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-[0_0_8px_rgba(255,204,0,0.5)] transition-transform hover:scale-105">
-        <span class="font-black text-lg sm:text-xl text-zinc-100 tracking-wide">الوكر.</span>
-    </div>
-    <div class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm font-bold tracking-wide">
-        <a href="https://arraqim.github.io/alwakr/blog/" class="text-zinc-300 hover:text-warning transition-all duration-300 hover:scale-105 drop-shadow-md hover:drop-shadow-[0_0_8px_rgba(255,204,0,0.6)]">الإصدارات</a>
-        <a href="#about" class="text-zinc-300 hover:text-warning transition-all duration-300 hover:scale-105 drop-shadow-md hover:drop-shadow-[0_0_8px_rgba(255,204,0,0.6)]">من أنتم</a>
-    </div>
-</nav>
+    <nav class="nav glass js-ui" aria-label="الرئيسية">
+        <a class="nav__brand" href="./"><img src="assets/logo.svg" alt="الوكر" width="30" height="30"></a>
+        <a class="nav__link" href="./" aria-current="page">الأقراص</a>
+        <a class="nav__link" href="blog/">الإصدارات</a>
+        <button class="nav__link" id="indexBtn" type="button" aria-expanded="false" aria-controls="indexMenu">
+            الفهرس
+            <i class="ico i--chev" aria-hidden="true"></i>
+        </button>
+        <a class="nav__link" href="#about" data-about>من أنتم</a>
+    </nav>
+    <div class="dropdown glass" id="indexMenu"></div>
 
-        <header class="max-w-4xl mx-auto w-full px-6 pt-24 pb-20 text-center sm:text-right">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md glass-panel text-zinc-300 text-[11px] font-bold mb-6">
-                <span class="flex h-2 w-2 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-warning opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-warning"></span>
-                </span>
-                <span class="tracking-widest uppercase">في فترة نقاهة بعد اليكز</span>
-            </div>
-            
+    <!-- مسرح الأقراص (يُبنى من القائمة أدناه) -->
+    <div class="scene" id="scene" aria-label="الأقراص"></div>
 
-            <h1 class="text-5xl sm:text-7xl font-black text-zinc-100 leading-tight mb-2 drop-shadow-lg">
-                الوكر -لا للحكر-
-            </h1>
-            <p class="text-warning font-bold text-xl sm:text-2xl mb-8 drop-shadow-[0_0_10px_rgba(255,204,0,0.4)]">
-                فريق لتعريب الألعاب وتعديلها
-            </p>
-            <div class="max-w-2xl sm:mx-0 mx-auto">
-                <p class="text-base sm:text-lg leading-relaxed text-zinc-400 mb-10">
-                   حظ التعديل عندنا أكبر من حظ الترجمة. فغالبًا تُتّرك المشاريع وتُنبذ دون إكمال.
-                </p>
-            </div>
-        </header>
-
-        <section id="new" class="max-w-4xl mx-auto w-full px-6 pb-24 flex-grow">
-            <div class="text-zinc-500 text-[13px] font-bold tracking-widest uppercase px-1 mb-6 border-r-2 border-warning pr-2">
-                المشاريع
-            </div>
-            
-<div class="glass-panel rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-    <div class="max-w-lg">
-        <div class="flex items-center gap-3 mb-2">
-            <a href="https://arraqim.github.io/alwakr/zero" class="text-xl font-bold text-zinc-200 hover:text-warning transition-colors">
-                كالتنين: صفر | 龍が如く0
-            </a>
-            <span class="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/30">مكتمل</span>
+    <aside class="info glass js-ui" id="info" aria-live="polite">
+        <div class="info__count swap" id="infoCount"></div>
+        <div class="swap">
+            <h2 class="info__title" id="infoTitle"></h2>
+            <p class="info__sub" id="infoSub"></p>
         </div>
-        <p class="text-xs leading-relaxed text-zinc-500">
-           نُشر التعريب. للتفاصيل اذهب لصفحة التعريب.
-        </p>
-    </div>
-    <div class="flex flex-row gap-3 text-xs font-bold shrink-0">
-        <a href="https://arraqim.github.io/alwakr/blog/zero.html" class="bg-warning text-dark px-4 py-2 rounded-lg hover:scale-105 transition-transform">صفحة التعريب</a>
-    </div>
-</div>
+        <dl class="rows swap" id="infoRows"></dl>
+        <div class="info__cta swap" id="infoCta"></div>
+    </aside>
 
-<p> </p>
+    <p class="disc-name swap js-ui" id="discName"></p>
 
-<div class="glass-panel rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6 opacity-60 hover:opacity-100">
-    <div class="max-w-lg">
-        <div class="flex items-center gap-3 mb-2">
-            <a href=" " class="text-xl font-bold text-zinc-400 hover:text-warning transition-colors">
-               أبو رايش: الحب الحقيقي
-            </a>
-            <span class="text-[10px] font-bold text-zinc-500 bg-zinc-900/80 px-2 py-0.5 rounded border border-zinc-800/60">قيد المناقشة</span>
-        </div>
-        <p class="text-xs leading-relaxed text-zinc-500">
-        لا وعود.
-        </p>
+    <div class="status pill glass js-ui">
+        <span class="ping"></span>
+        <span>في فترة نقاهة بعد اليكز</span>
     </div>
-    <div class="flex flex-row gap-3 text-xs font-bold shrink-0 opacity-50 cursor-not-allowed">
-        <span class="text-zinc-500">بعيدًا...</span>
+
+    <div class="hint js-ui">اسحب القرص لتقلبه</div>
+    <div class="controls glass js-ui">
+        <button class="step-btn" type="button" data-step="-1" aria-label="السابق"><i class="ico i--right" aria-hidden="true"></i></button>
+        <span class="controls__count"><b id="counter">٠١</b> / <span class="count-total"></span></span>
+        <button class="step-btn" type="button" data-step="1" aria-label="التالي"><i class="ico i--left" aria-hidden="true"></i></button>
     </div>
-</div>
 
-<p> </p>
-
-<div class="glass-panel rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6 opacity-60 hover:opacity-100">
-    <div class="max-w-lg">
-        <div class="flex items-center gap-3 mb-2">
-            <a href=" " class="text-xl font-bold text-zinc-400 hover:text-warning transition-colors">
-              بيرزيرك
-            </a>
-            <span class="text-[10px] font-bold text-zinc-500 bg-zinc-900/80 px-2 py-0.5 rounded border border-zinc-800/60">قيد التجربة والخطأ</span>
-        </div>
-        <p class="text-xs leading-relaxed text-zinc-500">
-       ربما؟ لا وعود.
-        </p>
+    <!-- شاشة التحميل (أول زيارة فقط) -->
+    <div class="loader" aria-hidden="true">
+        <div class="loader__top"><img src="assets/logo.svg" alt=""> يُدار القرص <span class="spin-glyph"></span></div>
+        <div class="loader__side loader__side--r">الوكر للتعريبات</div>
+        <div class="loader__side loader__side--l">لا للحكر</div>
+        <div class="loader__num">٠</div>
+        <div class="loader__word">الوكر</div>
     </div>
-    <div class="flex flex-row gap-3 text-xs font-bold shrink-0 opacity-50 cursor-not-allowed">
-        <span class="text-zinc-500">بعيدًا...</span>
-    </div>
-</div>
 
+    <!--
+        المشاريع: كل عنصر <li> قرص.
+        لإضافة لعبة: انسخ عنصرًا وعدّل بياناته.
+          data-art   صورة وجه القرص (مربعة أو تُقصّ تلقائيًا)
+          data-type  gold أو black لأقراص CD-R المكتوبة بالقلم (للمشاريع غير المكتملة)
+          data-ink   النص المكتوب بخط اليد على قرص CD-R
+          data-rim   النص الدائري حول حافة القرص
+    -->
+    <ol class="records">
 
+        <li class="record" id="zero" data-group="التعريبات" data-href="blog/zero.html">
+            <div data-disc data-art="zero/back.jpg" data-art-pos="50% 40%" data-logo="zero/logo.png" data-rim="كالتنين: صفر  ·  تعريب الوكر  ·  لا للحكر  ·  ٢٠٢٦"></div>
+            <h2 class="record__title">كالتنين: صفر</h2>
+            <p class="record__sub" lang="ja">龍が如く0</p>
+            <dl class="record__meta rows">
+                <div><dt>الحالة</dt><dd><span class="state state--done">مكتمل</span></dd></div>
+                <div><dt>تاريخ النشر</dt><dd>30 يونيو 2026</dd></div>
+                <div><dt>النسخ</dt><dd>ستيم · PS4 · GOG · المقرصنة</dd></div>
+                <div><dt>آخر تحديث</dt><dd>التحديث الثاني</dd></div>
+            </dl>
+            <a class="record__link" href="blog/zero.html">صفحة التعريب</a>
+        </li>
+
+        <li class="record" id="abu-raish" data-group="التعريبات">
+            <div data-disc data-type="gold" data-ink="أبو رايش" data-ink2="الحب الحقيقي" data-rim="قيد المناقشة  ·  لا وعود  ·  الوكر"></div>
+            <h2 class="record__title">أبو رايش: الحب الحقيقي</h2>
+            <dl class="record__meta rows">
+                <div><dt>الحالة</dt><dd><span class="state">قيد المناقشة</span></dd></div>
+            </dl>
+            <span class="record__link">بعيدًا...</span>
+        </li>
+
+        <li class="record" id="tgaac" data-group="الأدوات" data-href="tools/TGAAC/">
+            <div data-disc data-art="tools/TGAAC/bg.jpg" data-art-pos="78% 30%" data-rim="سجلات المحامي العظيم  ·  أدوات  ·  الوكر"></div>
+            <h2 class="record__title">سجلات المحامي العظيم</h2>
+            <p class="record__sub" lang="en">The Great Ace Attorney Chronicles</p>
+            <dl class="record__meta rows">
+                <div><dt>الصنف</dt><dd>أدوات تعريب</dd></div>
+                <div><dt>الكاتب</dt><dd>داركو</dd></div>
+                <div><dt>تاريخ النشر</dt><dd>1 يونيو 2026</dd></div>
+                <div><dt>المحتوى</dt><dd>كوريمو 2 وخمس أدوات</dd></div>
+            </dl>
+            <a class="record__link" href="tools/TGAAC/">صفحة الأدوات</a>
+        </li>
+
+    </ol>
+
+    <!-- من أنتم -->
+    <dialog class="about glass" id="about" aria-labelledby="aboutTitle">
+        <div class="about__in">
+            <button class="about__close" type="button" data-close aria-label="إغلاق"><i class="ico i--x" aria-hidden="true"></i></button>
+            <span class="pill glass"><span class="ping"></span>في فترة نقاهة بعد اليكز</span>
+            <h1 id="aboutTitle">الوكر -لا للحكر-</h1>
+            <p class="about__tag">فريق لتعريب الألعاب وتعديلها</p>
+            <p class="about__lede">حظ التعديل عندنا أكبر من حظ الترجمة. فغالبًا تُتّرك المشاريع وتُنبذ دون إكمال.</p>
+            <div class="about__links">
+                <a class="btn-ghost" href="blog/">الإصدارات<i class="ico i--left" aria-hidden="true"></i></a>
+                <a class="btn-ghost" href="https://github.com/arRaqim/alwakr" target="_blank" rel="noopener noreferrer">غيت هب<i class="ico i--out" aria-hidden="true"></i></a>
             </div>
-        </section>
+        </div>
+    </dialog>
 
-        <footer class="mt-auto py-8 text-center text-zinc-600 text-[11px] tracking-widest border-t border-zinc-900/60 w-full">
-            © 2077 نصف الحقوق محفوظة
-            <br>
-            <span class="text-zinc-700">فريق تابع للرَّقيم.</span>
-        </footer>
-
-    </div>
-
+    <script src="assets/wakr.js"></script>
 </body>
 </html>
